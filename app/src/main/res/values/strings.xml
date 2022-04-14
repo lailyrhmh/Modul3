@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Konversi Mata Uang</string>
+    <string name="select_currency">Pilih Mata Uang?</string>
+    <string name="option1">Euro</string>
+    <string name="option2">US Dollaro</string>
+    <string name="option3">Japanese Yen</string>
+    <string name="option4">Saudi Riyal</string>
+    <string name="hint">Nilai Mata Uang</string>
+    <string name="button">KONVERSI</string>
+    <string name="currencyResult">Nilai Rupiah: %s</string>
+</resources>
