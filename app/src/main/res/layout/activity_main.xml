@@ -69,8 +69,7 @@
         app:layout_constraintBottom_toBottomOf="@id/currency_value"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/currency_value"
-        app:srcCompat="@drawable/ic_baseline_close_fullscreen_24"
-        />
+        app:srcCompat="@drawable/ic_baseline_close_fullscreen_24" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/currency_value"
@@ -96,8 +95,8 @@
         android:id="@+id/calculate_button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/button"
         android:layout_marginTop="8dp"
+        android:text="@string/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@id/currency_value"
         app:layout_constraintTop_toBottomOf="@id/currency_value" />
