@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun calculateCurrency() {
-        val stringInTextField = binding.currencyValue.text.toString()
+        val stringInTextField = binding.currencyValueEditText.text.toString()
         //val value = stringInTextField.toDouble()
 
         val selecedId = binding.currencies.checkedRadioButtonId

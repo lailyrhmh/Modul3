@@ -12,17 +12,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:importantForAccessibility="no"
-        app:srcCompat="@drawable/ic_baseline_monetization_on_24"
+        app:layout_constraintBottom_toBottomOf="@+id/select"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/select"
-        app:layout_constraintBottom_toBottomOf="@+id/select" />
+        app:srcCompat="@drawable/ic_baseline_monetization_on_24" />
 
     <TextView
         android:id="@+id/select"
+        style="@style/Widget.CurrencyConvert.TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:text="@string/select_currency"
-        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toEndOf="@id/icon_select_currency"
         app:layout_constraintTop_toTopOf="parent" />
 
     <RadioGroup
@@ -31,7 +33,7 @@
         android:layout_height="wrap_content"
         android:checkedButton="@id/option_euro"
         android:orientation="vertical"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@id/select"
         app:layout_constraintTop_toBottomOf="@+id/select">
 
         <RadioButton
@@ -59,40 +61,53 @@
             android:text="@string/option4" />
     </RadioGroup>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textField"
-        android:layout_width="match_parent"
+    <ImageView
+        android:id="@+id/icon_currency_value"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="@string/hint">
+        android:importantForAccessibility="no"
+        app:layout_constraintBottom_toBottomOf="@id/currency_value"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/currency_value"
+        app:srcCompat="@drawable/ic_baseline_close_fullscreen_24"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/currency_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/icon_currency_value"
+        app:layout_constraintStart_toStartOf="@id/currencies"
+        app:layout_constraintTop_toBottomOf="@+id/currencies">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/currency_value_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            />
+            android:inputType="number" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <EditText
-        android:id="@+id/currency_value"
-        android:layout_width="160dp"
-        android:layout_height="wrap_content"
-        android:hint="@string/hint"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/currencies" />
 
     <Button
         android:id="@+id/calculate_button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/button"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@id/currency_value"
         app:layout_constraintTop_toBottomOf="@id/currency_value" />
 
     <TextView
         android:id="@+id/result"
+        style="@style/Widget.CurrencyConvert.TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/calculate_button" />
 
